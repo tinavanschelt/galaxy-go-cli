@@ -1,0 +1,67 @@
+{
+  "name": "swapi-console-app",
+  "version": "1.0.0",
+  "description": "SW ship resupply calculation.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint **/*.js --ignore-pattern node_modules/",
+    "galaxy-go": "./index.js"
+  },
+  "keywords": ["SWAPI", "CLI"],
+  "bin": {
+    "swapi": "./index.js"
+  },
+  "author": "Tina van Schelt <tinavanschelt@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^2.3.0",
+    "clear": "0.0.1",
+    "clui": "^0.3.6",
+    "console-emoji": "0.0.2",
+    "figlet": "^1.2.0",
+    "inquirer": "^5.0.1",
+    "isomorphic-fetch": "^2.2.1",
+    "request": "^2.85.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.2",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-config-recommended": "^2.0.0",
+    "eslint-plugin-import": "^2.10.0",
+    "eslint-plugin-jest": "^21.15.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-prettier": "^2.6.0",
+    "fetch-mock": "^6.3.0",
+    "jest": "^22.4.3",
+    "prettier": "^1.11.1"
+  },
+  "eslintConfig": {
+    "extends": ["airbnb-base", "prettier"],
+    "env": {
+      "node": true,
+      "jest/globals": true
+    },
+    "parser": "babel-eslint",
+    "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module"
+    },
+    "plugins": ["import", "jest", "prettier"],
+    "rules": {
+      "no-console": 0,
+      "prettier/prettier": [
+        "error",
+        {
+          "singleQuote": true
+        }
+      ]
+    }
+  },
+  "jest": {
+    "collectCoverageFrom": ["app/**/*.js", "!app/**/*.test.js"],
+    "moduleDirectories": ["node_modules"]
+  }
+}
